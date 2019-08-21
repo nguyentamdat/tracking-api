@@ -12,7 +12,7 @@ jwtOptions.secretOrKey = "wowwow";
 /* GET users listing. */
 router.post("/login", (req, res, next) => {
   try {
-    console.log(req.body.hubMac);
+    console.log(req.body);
     const { hubMac } = req.body;
     var payload = { id: hubMac };
     var token = jwt.sign(payload, jwtOptions.secretOrKey);
